@@ -1,0 +1,79 @@
+span {
+  background: url(9310165_star_sparkle_icon.png);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  pointer-events: none;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 6s linear;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -5000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
+body{
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 42%, rgb(4, 32, 116) 100%, rgb(2, 27, 86) 100%);
+    text-align: center;
+  }
+
+  .start-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(2, 2, 2);
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 3rem;
+    border-color: rgb(255, 255, 255);
+  }
+  
+  .start-btn:hover {
+    border-color: rgb(58, 3, 254);
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+    animation:  horizontal-shaking  0.5s infinite;
+  }
+  @keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+
+   }
+   .text{
+    position: relative;
+    font-weight: 900;
+    font-size: 74px;
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+   }
+  .letters{
+    color:rgb(255, 255, 255);
+  }
+  p{
+    color:rgba(243, 234, 234, 0.523);
+    font-size: 20px;
+    text-align: left;
+  }
+

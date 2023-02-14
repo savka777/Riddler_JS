@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>RIDDLE ME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="3671842_question_icon (1).png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="words.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+   
+  <header>
+    <nav>
+      <ul class="drop-down closed">
+        <li><a href="#" class="nav-button">INFO</a></li>
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="GameRules.html">Game Rules</a></li>
+        <li><a href="#">Thank you for playing!</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+   
+    <div class="container">
+        <div class="content">
+            <p class="word"></p>
+            <div class="details">
+                <p class="hint">Riddle: <span></span></p>
+                <p class="time">Timer: <span><b>45</b>s</span></p>
+                
+            </div>
+            <input id = "Myinput"type="text" spellcheck="false" placeholder="Enter a valid word" pattern="[A-Za-z]*">
+            <div class="buttons">
+                <button class="refresh-riddle">New Riddle</button>
+                <button id = "myBtn"class="check-riddle">Enter</button>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

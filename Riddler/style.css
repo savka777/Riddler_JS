@@ -1,0 +1,181 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 42%, rgb(4, 32, 116) 100%, rgb(2, 27, 86) 100%);
+}
+nav .drop-down {
+  list-style: none; 
+  overflow: hidden; 
+  height: 172px; 
+  background-color: #047cf5;
+  font-family: Arial;
+  width: 200px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  border-radius: 10%;
+  -webkit-transition: height 0.3s ease;
+          transition: height 0.3s ease;
+}
+
+header{
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+nav .drop-down.closed {
+  height: 45px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+nav .drop-down li {
+  border-bottom: 5px solid  #03417e;
+}
+
+nav .drop-down li :hover{
+  background: #fff;
+  color: #000;
+}
+
+nav .drop-down li a {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 8px;
+}
+
+nav .drop-down li:first-child a:after {
+  content: "\25BC";
+  float: right;
+  margin-left: -30px;
+  margin-right: 5px;
+}
+.container{
+  width: 440px;
+  border-radius: 7px;
+  background: rgb(255, 255, 255);
+  box-shadow: 10px 10px 20px rgba(230, 0, 0, 0.08);
+}
+.container .content{
+  margin: 25px 20px 35px;
+}
+.content .details{
+  margin: 25px 0 20px;
+}
+.details p{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.details p b{
+  font-weight: 500;
+}
+.content input{
+  width: 100%;
+  height: 60px;
+  outline: none;
+  padding: 0 16px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+.content input:focus{
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+}
+.content input::placeholder{
+  color: #aaa;
+}
+.content input:focus::placeholder{
+  color: #bfbfbf;
+}
+
+  input:invalid{
+  border-radius: 10px;
+  border-color: red;
+ 
+  animation: shake 0.5s infinite;
+}
+input:valid{
+  border-color: rgb(21, 113, 242);
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+.content .buttons{
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.buttons button{
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 0;
+  font-size: 17px;
+  border-radius: 5px;
+  width: calc(100% / 2 - 8px);
+  transition: all 0.3s ease;
+}
+
+/* change names of buttons to match exit and new riddle  */
+.buttons button:active{
+  transform: scale(0.97);
+}
+.buttons .refresh-riddle{
+  background: #6C757D;
+}
+.buttons .refresh-riddle:hover{
+  background: #5f666d;
+}
+.buttons .check-riddle{
+  background: #5372F0;
+}
+.buttons .check-riddle:hover{
+  background: #2c52ed;
+}
+
+@media screen and (max-width: 470px) {
+  .container h2{
+    font-size: 22px;
+    padding: 13px 20px;
+  }
+  .content .word{
+    font-size: 30px;
+    letter-spacing: 20px;
+    margin-right: -20px;
+  }
+  .container .content{
+    margin: 20px 20px 30px;
+  }
+  .details p{
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .content input{
+    height: 55px;
+    font-size: 17px;
+  }
+  .buttons button{
+    padding: 14px 0;
+    font-size: 16px;
+    width: calc(100% / 2 - 7px);
+  }
+}
+

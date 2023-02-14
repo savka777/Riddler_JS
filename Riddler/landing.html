@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landingstyle.css">
+    <link rel="icon" type="image/x-icon" href="3671842_question_icon (1).png">
+    <title>WELCOME TO RIDDLE ME</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="text">
+            <div class="text-wrapper">
+              <div class="letters">WELCOME TO RIDDLE ME</div>
+            </div>
+          </h1>
+          <p>
+            Rules of The Game <br>
+            You have 45 seconds to guess the riddle <br>
+            Only letters are accepted no numbers and symbols <br>
+            Only one word is accepted <br>
+            Riddles are choosen at random, if you do not know, click new riddle button. <br>
+            
+            Good Luck!
+           </p>
+          <a href="index.html" style="text-decoration:none">
+          <button class="start-btn" a href="index.html">Play Game</button>
+          </a>
+          </div> 
+
+</body>
+
+<script>
+const bodyEl = document.querySelector("body");
+bodyEl.addEventListener("mousemove", (event) => {
+  const xPos = event.offsetX;
+  const yPos = event.offsetY;
+  const spanEl = document.createElement("span");
+  spanEl.style.left = xPos + "px";
+  spanEl.style.top = yPos + "px";
+  const size = Math.random() * 50;
+  spanEl.style.width = size + "px";
+  spanEl.style.height = size + "px"
+  bodyEl.appendChild(spanEl);
+  setTimeout(() => {
+    spanEl.remove();
+  }, 3000);
+});
+</script>
+</html>
